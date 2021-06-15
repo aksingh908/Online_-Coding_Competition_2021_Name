@@ -10,14 +10,14 @@ int main()
 {
     int a[8][8];
   //  int ans= INT_MAX;
-    int ans=0;
-    int s=0;
+   // int min=0;
+    int small=0;
 
 for(int i=1; i<=8; i++)
 for(int j=1; j<=8; j++)
 {
 cin>>a[i][j];
-s=min(a[i][j],0);
+small=min(a[i][j],0);
 }
 
 int a1[8];
@@ -28,20 +28,24 @@ int j=1;
 // 2*2 mat
 while(t--)
 {
-for(; i<=2; i++){
+for(; i<=2; i++)
+{
 for(; j<=2; j++)
+{
 
-cout<<a[i][j]<<nl;
+//cout<<a[i][j]<<nl;
 a1[i]=min(a[i][j],ans);
+}
 i=i+2;
-j=j+2;}
+j=j+2;
+}
 }
 
 //min index;
 for(int i=1; i<=8; i++)
 for(int j=1; j<=8; j++)
 {
-    if(a[i][j]==s)
+    if(a[i][j]==small)
     cout<<i<<" "<<j<<nl;
 //cin>>a[i][j];
 //s=min(a[i][j],ans);
