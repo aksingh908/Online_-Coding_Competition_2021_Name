@@ -34,7 +34,7 @@ for(; j<=2; j++)
 {
 
 //cout<<a[i][j]<<nl;
-a1[i]=min(a[i][j],ans);
+a1[i]=min(a[i][j],0);
 }
 i=i+2;
 j=j+2;
