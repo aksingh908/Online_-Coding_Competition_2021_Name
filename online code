@@ -20,24 +20,29 @@ cin>>a[i][j];
 small=min(a[i][j],0);
 }
 
-int a1[8];
+int a1[16];
 
 int t=16;
 int i=1;
 int j=1;
+int count=0;
 // 2*2 mat
 while(t--)
 {
-for(; i<=2; i++)
+for(; ; i++)
 {
-for(; j<=2; j++)
+for(; ; j++)
 {
 
 //cout<<a[i][j]<<nl;
 a1[i]=min(a[i][j],0);
+count++;
+if(count==4)
+break;
 }
 i=i+2;
 j=j+2;
+count=0;
 }
 }
 
@@ -52,7 +57,7 @@ for(int j=1; j<=8; j++)
 }
 
 // min element;
-for(int i=1; i<=8 ;i++)
+for(int i=1; i<=16 ;i++)
 cout<<a1[i]<<nl;
 
 
