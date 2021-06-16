@@ -9,15 +9,15 @@ using namespace std;
 int main()
 {
     int a[8][8];
-  //  int ans= INT_MAX;
+   // int ans= INT_MAX;
    // int min=0;
-    int small=0;
+    int small=INT_MAX;
 
 for(int i=1; i<=8; i++)
 for(int j=1; j<=8; j++)
 {
 cin>>a[i][j];
-small=min(a[i][j],0);
+small=min(a[i][j],small);
 }
 
 int a1[16];
